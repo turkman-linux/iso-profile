@@ -1,1 +1,1 @@
-# Lxde iso
+# Turkman Linux iso profiles
