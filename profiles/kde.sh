@@ -4,7 +4,7 @@ ymp repo --update --allow-oem --ignore-gpg
 ymp it xinit xorg-server xterm freetype xauth xkbcomp xkeyboard-config @x11.drivers --no-emerge --allow-oem --jobs=1
 ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allow-oem --jobs=1
 # install kde
-ymp it @kde.plasma @kde.frameworks dolphin konsole dejavu tzdata --no-emerge --allow-oem --jobs=1
+ymp it @kde.plasma @kde.frameworks dolphin konsole dejavu tzdata seatd --no-emerge --allow-oem --jobs=1
 # install wifi and bluetooth
 ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
 # install sddm
