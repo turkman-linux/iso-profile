@@ -4,7 +4,7 @@ ymp repo --update --allow-oem --ignore-gpg
 ymp it xinit xorg-server xterm freetype xauth xkbcomp xkeyboard-config @x11.drivers --no-emerge --allow-oem --jobs=1
 ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allow-oem --jobs=1
 # install cinnamon
-ymp it @cinnamon caribou dejavu adwaita-icon-theme gsettings-desktop-schemas --no-emerge --allow-oem
+ymp it @cinnamon.base caribou dejavu adwaita-icon-theme gsettings-desktop-schemas --no-emerge --allow-oem
 gtk-update-icon-cache /usr/share/icons/hicolor/
 # install wifi and bluetooth
 ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
