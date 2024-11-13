@@ -10,19 +10,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        build_type: [xfce , cinnamon, lxde, kde, x11, sway, minimal, hyprland]
+
     steps:
       - uses: actions/checkout@v2
-      - name: build
+
+      - name: Run build script
         run: |
-          sudo bash build.sh
+          sudo bash build.sh ${{ matrix.build_type }}
 
+      - name: Upload build output
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.build_type }}-output
+          path: /output/*  # Assuming the output directory is the same for both builds
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: ${{ matrix.build_type }}  # Tag release with the build type (xxx or yyy)
           prerelease: false
-          title: "Auto build"
-          files: |
-            /output/*
+          title: "Auto build for ${{ matrix.build_type }}"
+          files: /output/*  # Path to the output files, modify if necessary
+
 

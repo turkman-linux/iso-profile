@@ -23,19 +23,18 @@ function build(){
     umount -lf rootfs/proc
     cd ..
 }
-for variant in $(ls profiles/ | sed "s/\.sh//g") ; do
-    for fw in 0 1; do
-        export FIRMWARE=""
-        export CONFIGURE="1"
-        suffix=""
-        if [[ "$fw" == "1" ]] ; then
-            export FIRMWARE=1
-            suffix="-firmware"
-            # move foss image
-            mv $variant $variant$suffix
-            export CONFIGURE="0"
-        fi
-        build $variant $suffix
-    done
-    rm -rf "$variant"*
+variant="$1"
+for fw in 0 1; do
+    export FIRMWARE=""
+    export CONFIGURE="1"
+    suffix=""
+    if [[ "$fw" == "1" ]] ; then
+        export FIRMWARE=1
+        suffix="-firmware"
+        # move foss image
+        mv $variant $variant$suffix
+        export CONFIGURE="0"
+    fi
+    build $variant $suffix
 done
+rm -rf "$variant"*
