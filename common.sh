@@ -17,6 +17,11 @@ chmod u+s /usr/bin/pkexec /usr/lib64/polkit-1/polkit-agent-helper-1 || true
 echo "/bin/bash" > /etc/shells
 echo "/bin/sh" >> /etc/shells
 echo "/bin/ash" >> /etc/shells
+# add installer
+ymp install e2fsprogs dialog grub parted dosfstools rsync --no-emerge --allow-oem
+rm -f /sbin/init
+wget https://gitlab.com/turkman/devel/sources/installer/-/raw/master/main.sh -O /sbin/init
+chmod 755 /sbin/init
 # reduce iso size
 ymp install no-static --no-emerge --allow-oem
 touch /.allow-oem
