@@ -21,13 +21,6 @@ jobs:
         run: |
           sudo bash build.sh ${{ matrix.build_type }}
 
-      - name: Upload build output
-        if: success()
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ matrix.build_type }}-output
-          path: /output/*  # Assuming the output directory is the same for both builds
-
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
