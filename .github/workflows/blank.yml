@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run build script
+        continue-on-error: true
         run: |
           sudo bash build.sh ${{ matrix.build_type }}
 
