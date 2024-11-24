@@ -25,7 +25,7 @@ function build(){
     cd ..
 }
 variant="$1"
-export COMPRESS="gzip"
+export COMPRESS="xz"
 for fw in 0 1; do
     export FIRMWARE=""
     export CONFIGURE="1"
