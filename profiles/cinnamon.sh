@@ -7,6 +7,9 @@ ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allo
 ymp it @cinnamon.base gnome-screenshot caribou dejavu adwaita-icon-theme gsettings-desktop-schemas polkit-gnome gnome-terminal libhandy libunwind seatd touchegg --no-emerge --allow-oem
 ymp it gnome-icon-theme gnome-themes-standard --no-emerge --allow-oem
 gtk-update-icon-cache /usr/share/icons/hicolor/
+# install flatpak
+ymp it flatpak --no-emerge --allow-oem
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # install wifi and bluetooth
 ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
 # install lightdm
