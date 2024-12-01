@@ -42,3 +42,4 @@ for fw in 0 1; do
     build $variant $suffix
 done
 rm -rf "$variant"*
+
