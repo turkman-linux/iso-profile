@@ -27,7 +27,7 @@ function build(){
 variant="$1"
 # for flatpak
 export OSTREE_BOOTID="$RANDOM"
-export COMPRESS="xz"
+#export COMPRESS="xz"
 for fw in 0 1; do
     export FIRMWARE=""
     export CONFIGURE="1"
