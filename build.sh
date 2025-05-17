@@ -1,8 +1,10 @@
 #!/bin/bash
 set -ex
 mkdir /output -p
-apt update
-apt install git grub-pc-bin grub-efi grub-efi-ia32-bin squashfs-tools mtools xorriso rdfind -y
+if command -v apt ; then
+    apt update
+    apt install git grub-pc-bin grub-efi grub-efi-ia32-bin squashfs-tools mtools xorriso rdfind -y
+fi
 function build(){
     variant=$1
     suffix=$2
