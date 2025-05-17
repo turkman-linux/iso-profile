@@ -7,7 +7,7 @@ ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allo
 ymp it @xfce dejavu adwaita-icon-theme gsettings-desktop-schemas --no-emerge --allow-oem
 gtk-update-icon-cache /usr/share/icons/hicolor/
 # install firefox-installer
-ymp it firfox-installer --no-emerge --allow-oem
+ymp it firefox-installer --no-emerge --allow-oem
 # install flatpak
 ymp it flatpak --no-emerge --allow-oem
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
