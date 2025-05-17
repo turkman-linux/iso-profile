@@ -17,6 +17,8 @@ chmod u+s /usr/bin/pkexec /usr/lib64/polkit-1/polkit-agent-helper-1 || true
 echo "/bin/bash" > /etc/shells
 echo "/bin/sh" >> /etc/shells
 echo "/bin/ash" >> /etc/shells
+# add lsl
+ymp install lsl --no-emerge --allow-oem
 # add installer
 ymp install btrfs-progs e2fsprogs dialog grub parted dosfstools rsync --no-emerge --allow-oem
 rm -f /sbin/init
