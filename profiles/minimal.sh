@@ -1,4 +1,5 @@
 #!/bin/bash
+rc-update add eudev
 rc-update add udhcpc
 rc-update add hostname
 rc-update add devfs

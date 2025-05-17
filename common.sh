@@ -20,7 +20,8 @@ echo "/bin/ash" >> /etc/shells
 # add lsl
 ymp install lsl --no-emerge --allow-oem
 # add installer
-ymp install btrfs-progs e2fsprogs dialog grub parted dosfstools rsync --no-emerge --allow-oem
+ymp install btrfs-progs e2fsprogs dialog grub parted \
+    popt dosfstools rsync --no-emerge --allow-oem
 rm -f /sbin/init
 wget https://gitlab.com/turkman/devel/sources/installer/-/raw/master/main.sh -O /sbin/init
 chmod 755 /sbin/init
