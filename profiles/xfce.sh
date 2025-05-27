@@ -20,6 +20,7 @@ rc-update add networkmanager
 rc-update add lightdm
 rc-update add bluetooth
 # enable services
+rc-update add polkit
 rc-update add elogind
 rc-update add eudev
 rc-update add fuse
