@@ -26,7 +26,7 @@ rm -f /sbin/init
 wget https://gitlab.com/turkman/devel/sources/installer/-/raw/master/main.sh -O /sbin/init
 chmod 755 /sbin/init
 # fixme stuff
-gdk-pixbuf-query-loaders --update-cache
+gdk-pixbuf-query-loaders --update-cache || true
 # enable services
 rc-update add hostname boot
 rc-update add devfs sysinit
