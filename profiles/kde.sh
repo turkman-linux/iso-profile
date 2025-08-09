@@ -6,11 +6,11 @@ ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allo
 # install kde
 ymp it @kde.plasma @kde.frameworks dolphin konsole dejavu tzdata seatd --no-emerge --allow-oem --jobs=1
 # install wifi and bluetooth
-ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
+ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem --jobs=1
 # install sddm
-ymp it sddm --no-emerge --allow-oem
+ymp it sddm --no-emerge --allow-oem --jobs=1
 # install firefox-installer
-ymp it firefox-installer --no-emerge --allow-oem
+ymp it firefox-installer --no-emerge --allow-oem --jobs=1
 # install flatpak
 ymp it flatpak --no-emerge --allow-oem
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

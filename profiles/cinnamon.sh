@@ -4,11 +4,11 @@ ymp repo --update --allow-oem --ignore-gpg
 ymp it xinit xorg-server xterm freetype xauth xkbcomp xkeyboard-config @x11.drivers --no-emerge --allow-oem --jobs=1
 ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allow-oem --jobs=1
 # install cinnamon
-ymp it @cinnamon.base gnome-screenshot caribou dejavu adwaita-icon-theme gsettings-desktop-schemas polkit-gnome gnome-terminal libhandy libunwind seatd touchegg --no-emerge --allow-oem
-ymp it gnome-icon-theme gnome-themes-standard --no-emerge --allow-oem
+ymp it @cinnamon.base gnome-screenshot caribou dejavu adwaita-icon-theme gsettings-desktop-schemas polkit-gnome gnome-terminal libhandy libunwind seatd touchegg --no-emerge --allow-oem  --jobs=1
+ymp it gnome-icon-theme gnome-themes-standard --no-emerge --allow-oem  --jobs=1
 gtk-update-icon-cache /usr/share/icons/hicolor/
 # install firefox-installer
-ymp it firefox-installer --no-emerge --allow-oem
+ymp it firefox-installer --no-emerge --allow-oem --jobs=1
 # install flatpak
 ymp it flatpak --no-emerge --allow-oem
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

@@ -4,9 +4,9 @@ ymp repo --update --allow-oem --ignore-gpg
 ymp it xinit xorg-server xterm freetype xauth xkbcomp xkeyboard-config @x11.drivers --no-emerge --allow-oem --jobs=1
 ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allow-oem --jobs=1
 # install lxde
-ymp it @lxde openbox --no-emerge --allow-oem
+ymp it @lxde openbox --no-emerge --allow-oem --jobs=1
 # install firefox-installer
-ymp it firefox-installer --no-emerge --allow-oem
+ymp it firefox-installer --no-emerge --allow-oem --jobs=1
 # install flatpak
 ymp it flatpak --no-emerge --allow-oem
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
