@@ -18,14 +18,13 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 rm /etc/localtime
 ln -s /usr/share/zoneinfo/UTC /etc/localtime
 # enable services
-rc-update add elogind
-rc-update add eudev
-rc-update add fuse
-rc-update add seatd
-rc-update add upowerd
-rc-update add hostname
-rc-update add wpa_supplicant
-rc-update add networkmanager
-rc-update add sddm
-rc-update add bluetooth
-rc-update add polkit
+rc-update add elogind boot
+rc-update add eudev sysinit
+rc-update add fuse sysinit
+rc-update add seatd default
+rc-update add upowerd default
+rc-update add wpa_supplicant default
+rc-update add networkmanager default
+rc-update add sddm default
+rc-update add bluetooth default
+rc-update add polkit default

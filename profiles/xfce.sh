@@ -15,15 +15,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem
 # install lightdm
 ymp it lightdm-pardus-greeter lightdm --no-emerge --allow-oem
-rc-update add wpa_supplicant
-rc-update add networkmanager
-rc-update add lightdm
-rc-update add bluetooth
+rc-update add wpa_supplicant default
+rc-update add networkmanager default
+rc-update add lightdm default
+rc-update add bluetooth default
 # enable services
-rc-update add polkit
-rc-update add elogind
-rc-update add eudev
-rc-update add fuse
-rc-update add udhcpc
-rc-update add upowerd
-rc-update add hostname
+rc-update add polkit default
+rc-update add elogind boot
+rc-update add eudev sysinit
+rc-update add fuse sysinit
+rc-update add udhcpc boot
+rc-update add upowerd default

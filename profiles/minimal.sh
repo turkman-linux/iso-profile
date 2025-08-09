@@ -1,8 +1,6 @@
 #!/bin/bash
-rc-update add eudev
-rc-update add udhcpc
-rc-update add hostname
-rc-update add devfs
+rc-update add eudev sysinit
+rc-update add udhcpc boot
 if [ ! -f /usr/bin/login ] ; then
     ln -s /bin/busybox /usr/bin/login
 fi

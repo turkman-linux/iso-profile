@@ -25,6 +25,9 @@ ymp install btrfs-progs e2fsprogs dialog grub parted \
 rm -f /sbin/init
 wget https://gitlab.com/turkman/devel/sources/installer/-/raw/master/main.sh -O /sbin/init
 chmod 755 /sbin/init
+# enable services
+rc-update add hostname boot
+rc-update add devfs sysinit
 # reduce iso size
 ymp install no-static --no-emerge --allow-oem
 touch /.allow-oem
