@@ -5,6 +5,8 @@ ymp it xinit xorg-server xterm freetype xauth xkbcomp xkeyboard-config @x11.driv
 ymp it elogind libtool shadow pipewire wireplumber fuse fuse2 --no-emerge --allow-oem --jobs=1
 # install kde
 ymp it @kde.plasma @kde.frameworks dolphin konsole dejavu tzdata seatd --no-emerge --allow-oem --jobs=1
+# fixme: plasma-shell dependency
+ymp it kirigami-addons --no-emerge --allow-oem --jobs=1
 # install wifi and bluetooth
 ymp it wpa_supplicant networkmanager bluez --no-emerge --allow-oem --jobs=1
 # install sddm
