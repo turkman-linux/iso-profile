@@ -25,4 +25,3 @@ rc-update add polkit default
 rc-update add elogind boot
 rc-update add eudev sysinit
 rc-update add fuse sysinit
-rc-update add upowerd default
